@@ -1,0 +1,10 @@
+C:\Projetos\Benner\Ado\bin\Debug\Ado.dll
+C:\Projetos\Benner\Ado\bin\Debug\Ado.pdb
+C:\Projetos\Benner\Ado\bin\Debug\Repositorio.dll
+C:\Projetos\Benner\Ado\bin\Debug\Repositorio.pdb
+C:\Projetos\Benner\Ado\obj\Debug\Ado.csprojResolveAssemblyReference.cache
+C:\Projetos\Benner\Ado\obj\Debug\Ado.csproj.CoreCompileInputs.cache
+C:\Projetos\Benner\Ado\obj\Debug\Ado.dll
+C:\Projetos\Benner\Ado\obj\Debug\Ado.pdb
+C:\Projetos\Benner\Ado\bin\Debug\Entities.dll
+C:\Projetos\Benner\Ado\bin\Debug\Entities.pdb

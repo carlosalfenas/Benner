@@ -1,0 +1,6 @@
+C:\Projetos\Benner\Entities\bin\Debug\Entities.dll
+C:\Projetos\Benner\Entities\bin\Debug\Entities.pdb
+C:\Projetos\Benner\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Projetos\Benner\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Projetos\Benner\Entities\obj\Debug\Entities.dll
+C:\Projetos\Benner\Entities\obj\Debug\Entities.pdb
