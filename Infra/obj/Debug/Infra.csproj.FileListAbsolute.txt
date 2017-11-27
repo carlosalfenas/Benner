@@ -1,0 +1,5 @@
+C:\Projetos\Benner\Infra\bin\Debug\Infra.dll
+C:\Projetos\Benner\Infra\bin\Debug\Infra.pdb
+C:\Projetos\Benner\Infra\obj\Debug\Infra.csproj.CoreCompileInputs.cache
+C:\Projetos\Benner\Infra\obj\Debug\Infra.dll
+C:\Projetos\Benner\Infra\obj\Debug\Infra.pdb

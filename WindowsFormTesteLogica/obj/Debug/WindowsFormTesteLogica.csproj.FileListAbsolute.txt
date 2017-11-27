@@ -1,0 +1,10 @@
+C:\Projetos\Benner\WindowsFormTesteLogica\bin\Debug\WindowsFormTesteLogica.exe.config
+C:\Projetos\Benner\WindowsFormTesteLogica\bin\Debug\WindowsFormTesteLogica.exe
+C:\Projetos\Benner\WindowsFormTesteLogica\bin\Debug\WindowsFormTesteLogica.pdb
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.csprojResolveAssemblyReference.cache
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.Form1.resources
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.Properties.Resources.resources
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.csproj.GenerateResource.Cache
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.csproj.CoreCompileInputs.cache
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.exe
+C:\Projetos\Benner\WindowsFormTesteLogica\obj\Debug\WindowsFormTesteLogica.pdb

@@ -11,19 +11,19 @@
         <div class="col-md-4">
             <h2>PAGINA INICIAL</h2>
          <p>
-                <a class="btn btn-default" href="#">Clique Aqui</a>
+                <a class="btn btn-default" href="Default.aspx">Clique Aqui</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>TAXAS</h2>
               <p>
-                <a class="btn btn-default" href="#">Clique Aqui</a>
+                <a class="btn btn-default" href="Taxas.aspx">Clique Aqui</a>
             </p>        
         </div>
         <div class="col-md-4">
             <h2>ENTRADA SAÍDA</h2>        
             <p>
-                <a class="btn btn-default" href="#">Clique aqui</a>
+                <a class="btn btn-default" href="EntradaSaida.aspx">Clique aqui</a>
             </p>
         </div>
     </div>

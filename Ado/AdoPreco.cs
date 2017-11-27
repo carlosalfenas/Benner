@@ -1,4 +1,4 @@
-﻿using Benner.REPOSITORIO;
+﻿using Infra;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,6 +23,8 @@ namespace  Ado
                     cmd.Parameters.AddWithValue("@PrecoAdicional", SqlDbType.Float).Value = e.PrecoAdicional;
                     cmd.Parameters.AddWithValue("@DataCadastro", SqlDbType.DateTime).Value = DateTime.Now;
                     cmd.Parameters.AddWithValue("@DataAlteracao", SqlDbType.DateTime).Value = DateTime.Now;
+                    cmd.Parameters.AddWithValue("@DataInicioVigencia", SqlDbType.DateTime).Value = e.DataInicioVigencia;
+                    cmd.Parameters.AddWithValue("@DataFimVigencia", SqlDbType.DateTime).Value = e.DataFimVigencia;
                     cmd.Parameters.AddWithValue("@Flag", SqlDbType.Bit).Value = e.Flag;
                     Int32 idretorno = Convert.ToInt32(cmd.ExecuteScalar());
                     return idretorno;
@@ -48,6 +50,8 @@ namespace  Ado
                     cmd.Parameters.AddWithValue("@Preco", SqlDbType.Float).Value = e.Preco;
                     cmd.Parameters.AddWithValue("@PrecoAdicional", SqlDbType.Float).Value = e.PrecoAdicional;              
                     cmd.Parameters.AddWithValue("@DataAlteracao", SqlDbType.DateTime).Value = DateTime.Now;
+                    cmd.Parameters.AddWithValue("@DataInicioVigencia", SqlDbType.DateTime).Value = e.DataInicioVigencia;
+                    cmd.Parameters.AddWithValue("@DataFimVigencia", SqlDbType.DateTime).Value = e.DataFimVigencia;
                     cmd.Parameters.AddWithValue("@Flag", SqlDbType.Bit).Value = e.Flag;
                     cmd.ExecuteNonQuery();
                     return 1;
@@ -96,7 +100,7 @@ namespace  Ado
             }
         }
              
-        public DataTable ReadPreco(int? IdPreco, int? Flag)
+        public DataTable ReadPreco(DateTime dataVigencia)
         {
             DataTable dt = new DataTable();
             try
@@ -105,13 +109,8 @@ namespace  Ado
                 {
                     var cmd = contexto.Comando();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "ReadPreco";
-                    if (IdPreco > 0)
-                        cmd.Parameters.AddWithValue("@IdPreco", SqlDbType.Int).Value = IdPreco;
-
-                    if (Flag > 0)
-                        cmd.Parameters.AddWithValue("@Flag", SqlDbType.Int).Value = Flag;
-
+                    cmd.CommandText = "ReadPreco";              
+                    cmd.Parameters.AddWithValue("@DataVigencia", SqlDbType.Date).Value = dataVigencia;
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                     dataAdapter.SelectCommand = cmd;
                     dataAdapter.Fill(dt);

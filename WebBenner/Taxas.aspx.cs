@@ -17,14 +17,14 @@ namespace WebBenner
         {
             if (!Page.IsPostBack)
             {
-                Bind(0);
+                Bind();
             }
         }
 
         protected void GVTaxas_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GVTaxas.PageIndex = e.NewPageIndex;
-            Bind(0);
+            Bind();
         }
 
         protected void GVTaxas_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -38,10 +38,10 @@ namespace WebBenner
             }
         }
 
-        private void Bind(int? IdPreco)
+        private void Bind()
         {
             var precos = new Repository.RepPrecos();
-            var dt = precos.Read(IdPreco, 0);
+            var dt = precos.Read(DateTime.Now.Date);
             GVTaxas.DataSource = dt;
             GVTaxas.DataBind();
         }
@@ -67,7 +67,7 @@ namespace WebBenner
 
                 if (precos.Delete(IdPreco))
                 {
-                    Bind(null);
+                    Bind();
                 }
             }
         }

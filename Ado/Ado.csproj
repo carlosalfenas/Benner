@@ -49,8 +49,8 @@
       <Project>{b290a882-a235-468e-ae0a-daf5fb61b883}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositorio\Infra.csproj">
-      <Project>{d7ad04af-a508-49e2-995c-554c307aa854}</Project>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{ceab684e-1512-44ea-9d09-a3b3556eb54a}</Project>
       <Name>Infra</Name>
     </ProjectReference>
   </ItemGroup>

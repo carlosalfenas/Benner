@@ -34,9 +34,9 @@ namespace Repository
            return repositorio.DeletePreco(Id);
         }
 
-        public DataTable Read(int? IdPreco, int? Flag)
+        public DataTable Read(DateTime DataVigencia)
         {
-            return repositorio.ReadPreco(IdPreco, Flag);
+            return repositorio.ReadPreco(DataVigencia);
         }
 
         public void ClearFlag()

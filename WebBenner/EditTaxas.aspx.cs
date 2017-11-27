@@ -40,7 +40,7 @@ namespace WebBenner
         private void Bind(int? IdPreco)
         {
             var precos = new Repository.RepPrecos();
-            var dt = precos.Read(IdPreco, 0);
+            var dt = precos.Read(DateTime.Now.Date);
 
             if (dt.Rows.Count > 0)
             {
@@ -92,6 +92,8 @@ namespace WebBenner
             e.Descricao = txtDescricao.Text;
             e.Preco = Convert.ToDouble(txtPreco.Text);
             e.PrecoAdicional = Convert.ToDouble(txtPrecoAdicional.Text);
+            e.DataInicioVigencia = Convert.ToDateTime(txtInicioVigencia.Text);
+            e.DataFimVigencia = Convert.ToDateTime(txtFimVigencia.Text);
             e.Flag = Convert.ToBoolean(chkAtivo.Checked);
             precos.ClearFlag();
 

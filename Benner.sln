@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Repositorio\Infra.csproj", "{D7AD04AF-A508-49E2-995C-554C307AA854}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ado", "Ado\Ado.csproj", "{E1A50752-2D8D-4A51-BE23-3264FEC87709}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBenner", "WebBenner\WebBenner.csproj", "{9AB83371-57C7-4071-BF0D-35813994F234}"
@@ -13,16 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{B290A882-A235-468E-AE0A-DAF5FB61B883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{CEAB684E-1512-44EA-9D09-A3B3556EB54A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormTesteLogica", "WindowsFormTesteLogica\WindowsFormTesteLogica.csproj", "{F5D0DA59-213F-4859-8B5E-07391BCB977C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7AD04AF-A508-49E2-995C-554C307AA854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7AD04AF-A508-49E2-995C-554C307AA854}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7AD04AF-A508-49E2-995C-554C307AA854}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7AD04AF-A508-49E2-995C-554C307AA854}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1A50752-2D8D-4A51-BE23-3264FEC87709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1A50752-2D8D-4A51-BE23-3264FEC87709}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1A50752-2D8D-4A51-BE23-3264FEC87709}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{B290A882-A235-468E-AE0A-DAF5FB61B883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B290A882-A235-468E-AE0A-DAF5FB61B883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B290A882-A235-468E-AE0A-DAF5FB61B883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEAB684E-1512-44EA-9D09-A3B3556EB54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEAB684E-1512-44EA-9D09-A3B3556EB54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEAB684E-1512-44EA-9D09-A3B3556EB54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEAB684E-1512-44EA-9D09-A3B3556EB54A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D0DA59-213F-4859-8B5E-07391BCB977C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D0DA59-213F-4859-8B5E-07391BCB977C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D0DA59-213F-4859-8B5E-07391BCB977C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D0DA59-213F-4859-8B5E-07391BCB977C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

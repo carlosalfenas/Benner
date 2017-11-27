@@ -11,6 +11,8 @@ namespace Entities
         public DateTime DataCadastro { get; set; }
         public DateTime DataAlteracao { get; set; }
         public byte Ativo { get; set; }   
-        public bool Flag { get; set; } 
+        public bool Flag { get; set; }
+        public DateTime DataInicioVigencia { get; set; }
+        public DateTime DataFimVigencia { get; set; }
     }
 }

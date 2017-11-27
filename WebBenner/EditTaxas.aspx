@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditTaxas.aspx.cs" Inherits="WebBenner.EditTaxas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <script src="Scripts/Mascara.js"></script>
     <script type="text/javascript">
         function apenasnumerosvirgula(obj, e) {
             var tecla = (window.event) ? e.keyCode : e.which;
@@ -52,6 +52,24 @@
                                                 </td>
                                                 <td>
                                                     <asp:TextBox ID="txtPrecoAdicional" attrname="telephone1" runat="server" MaxLength="15" autocomplete="off" Width="313px"></asp:TextBox>
+                                                </td>
+                                            </tr>
+
+                                                    <tr>
+                                                <td align="right">
+                                                    <b>DATA INICIO VIGÊNCIA:</b>:
+                                                </td>
+                                                <td>
+                                                    <asp:TextBox ID="txtInicioVigencia"  runat="server" MaxLength="10" onkeyup="formataData  (this,event);" autocomplete="off" Width="313px"></asp:TextBox>
+                                                </td>
+                                            </tr>
+
+                                                    <tr>
+                                                <td align="right">
+                                                    <b>DATA FINAL VIGÊNCIA:</b>:
+                                                </td>
+                                                <td>
+                                                    <asp:TextBox ID="txtFimVigencia"  runat="server" MaxLength="10" onkeyup="formataData  (this,event);" autocomplete="off" Width="313px"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>

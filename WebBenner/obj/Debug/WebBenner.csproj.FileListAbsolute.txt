@@ -22,7 +22,6 @@ C:\Projetos\Benner\WebBenner\bin\Microsoft.Web.Infrastructure.dll
 C:\Projetos\Benner\WebBenner\bin\Newtonsoft.Json.dll
 C:\Projetos\Benner\WebBenner\bin\System.Web.Optimization.dll
 C:\Projetos\Benner\WebBenner\bin\WebGrease.dll
-C:\Projetos\Benner\WebBenner\bin\Repositorio.dll
 C:\Projetos\Benner\WebBenner\bin\Ado.pdb
 C:\Projetos\Benner\WebBenner\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Projetos\Benner\WebBenner\bin\System.Web.Optimization.xml
@@ -34,7 +33,6 @@ C:\Projetos\Benner\WebBenner\bin\Microsoft.AI.DependencyCollector.xml
 C:\Projetos\Benner\WebBenner\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Projetos\Benner\WebBenner\bin\Microsoft.AI.WindowsServer.xml
 C:\Projetos\Benner\WebBenner\bin\Microsoft.AI.Web.xml
-C:\Projetos\Benner\WebBenner\bin\Repositorio.pdb
 C:\Projetos\Benner\WebBenner\obj\Debug\WebBenner.csprojResolveAssemblyReference.cache
 C:\Projetos\Benner\WebBenner\obj\Debug\WebBenner.csproj.CoreCompileInputs.cache
 C:\Projetos\Benner\WebBenner\obj\Debug\WebBenner.dll
@@ -43,3 +41,5 @@ C:\Projetos\Benner\WebBenner\bin\Entities.dll
 C:\Projetos\Benner\WebBenner\bin\Repository.dll
 C:\Projetos\Benner\WebBenner\bin\Entities.pdb
 C:\Projetos\Benner\WebBenner\bin\Repository.pdb
+C:\Projetos\Benner\WebBenner\bin\Infra.dll
+C:\Projetos\Benner\WebBenner\bin\Infra.pdb

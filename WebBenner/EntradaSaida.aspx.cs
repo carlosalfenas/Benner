@@ -33,7 +33,7 @@ namespace WebBenner
             Image abertofechado;
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-              var  DataSaida = DataBinder.Eval(e.Row.DataItem, "HorarioSaida").ToString();
+                 var  DataSaida = DataBinder.Eval(e.Row.DataItem, "HorarioSaida").ToString();
                 abertofechado = (Image)e.Row.FindControl("btnEdit");
 
                 if (DataSaida != null && DataSaida != "")

@@ -29,7 +29,9 @@ namespace WebBenner
             get { return (double)(ViewState["PrecoAdicional"] ?? 0); }
             set { ViewState["PrecoAdicional"] = value; }
         }
-#endregion
+
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -41,17 +43,15 @@ namespace WebBenner
                 {
                     IdEntradaSaida = Convert.ToInt32(id);
                     if (IdEntradaSaida > 0)
-                        Bind(IdEntradaSaida);
+                        BindEntradaSaida(IdEntradaSaida);
                 }
             }
         }
 
         private void BindPreco()
-        {
-            txtHorarioChegada.Text = "00:00";
-            TxtHorarioSaida.Text = "00:00";
+        {      
             var precos = new Repository.RepPrecos();
-            var dt = precos.Read(IdPreco, 1);
+            var dt = precos.Read(DateTime.Now.Date);
             if (dt.Rows.Count > 0)
             {
                 IdPreco = Convert.ToInt32(dt.Rows[0]["IdPreco"].ToString());
@@ -62,7 +62,7 @@ namespace WebBenner
             }
         }
 
-        private void Bind(int idEntradaSaida)
+        private void BindEntradaSaida(int idEntradaSaida)
         {
             var entradasaida = new Repository.RepEntradaSaida();
             var dt = entradasaida.Read(idEntradaSaida);
@@ -70,8 +70,7 @@ namespace WebBenner
             if (dt.Rows.Count > 0)
             {
                 TxtHorarioSaida.Focus();
-                TxtHorarioSaida.Enabled = true;
-                TxtHorarioSaida.Text = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute);
+                TxtHorarioSaida.Enabled = true;         
                 txtPlaca.Text = dt.Rows[0]["PlacaVeiculo"].ToString();
                 txtHorarioChegada.Text = dt.Rows[0]["HorarioChegada"].ToString();
             }
@@ -89,7 +88,6 @@ namespace WebBenner
             else
                 GravaSaidaVeiculos();
         }
-
 
         private void GravaEntradaVeiculos()
         {
@@ -130,7 +128,7 @@ namespace WebBenner
             es.TempoCobrado = CalculaTempoCobrado(Convert.ToDateTime(txtHorarioChegada.Text));
             //Calcula valor a pagar
             es.ValorPagar = CalculaValorPagar(Convert.ToDateTime(txtHorarioChegada.Text));
-            
+
             verifica = entradasaida.Update(es);
 
             if (verifica > 0)
@@ -142,8 +140,8 @@ namespace WebBenner
 
         private DateTime CalculaDuracao(DateTime horarioEntrada)
         {
-            var horarioAtual = DateTime.Now;
-            var result = horarioAtual - horarioEntrada;
+            var horarioSaida = Convert.ToDateTime(TxtHorarioSaida.Text);
+            var result = horarioSaida - horarioEntrada;
             return Convert.ToDateTime(result.ToString().Substring(0, 8));
         }
 
@@ -151,20 +149,20 @@ namespace WebBenner
         {
             int resultado = 0;
             var horarioAtual = DateTime.Now;
-            var resultempo = horarioAtual - horarioEntrada;
-            var tempo = resultempo.ToString().Substring(0, 8);
+            var duracao = CalculaDuracao(horarioEntrada);
 
-            var tempoatual = Convert.ToDateTime(resultempo.ToString().Substring(0, 8));
-
-            if (tempoatual.Hour == 0)
+            if (duracao.Hour == 0 && duracao.Minute >= 10)
             {
                 resultado = 1;
             }
-            else
-            if (tempoatual.Hour > 0)
+
+            else if (duracao.Hour > 0 && duracao.Minute > 10)
             {
-                resultado = Convert.ToInt32(tempoatual.Hour);
+                resultado = duracao.Hour + 1;
             }
+            
+            else
+                resultado = duracao.Hour;
 
             return resultado;
         }
@@ -181,12 +179,15 @@ namespace WebBenner
                 {
                     valorapagar = Preco / 2;
                 }
+                else
+                    valorapagar = Preco;
+            }
+            else if (tempo.Minute > 10)
+            {
+                valorapagar = tempo.Hour * Preco + PrecoAdicional;
             }
             else
-            if (tempo.Minute > 10)
-            {
-                valorapagar = CalculaTempoCobrado(horarioEntrada) + Preco + PrecoAdicional;
-            }
+                valorapagar = tempo.Hour * Preco;
 
             return valorapagar;
         }
